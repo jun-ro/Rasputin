@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./design/styles.css">
+    <script src="./modules/particles.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/foobar404/wave.js/dist/bundle.js"></script>
+</head>
+
+<body>
+    <!--<div class="container">
+        <button id="btn-start"></button>
+    </div>-->
+    <div id="input" class="container">
+        <canvas id="visualizer" height="200" width="200"></canvas>
+    </div>
+    <div class="container2">
+        <button id="voiceInput">Talk to me</button>
+    </div>
+    <audio id="myAudio" src="./design/image/audio/rasputin.mp3" style="position: fixed;right: 0px;"></audio>
+    <script>
+        let canvas = document.querySelector("canvas");
+        let audio = document.querySelector("audio");
+        let wave = new Wave(audio, canvas);
+
+        canvas.height = 600;
+        canvas.width = 600;
+        wave.addAnimation(new wave.animations.Turntable({
+            lineWidth: 1,
+            lineColor: "white",
+            count: 100
+        }));
+        wave.addAnimation(new wave.animations.Glob({
+            fillColor: {
+                gradient: ["black", "black", "black"],
+                //rotate: 45
+            },
+            lineWidth: 1,
+            lineColor: "#fff"
+        }));
+        //wave.addAnimation(new wave.animations.Flower({
+        //    fillColor: {
+        //        gradient: ["black", "black", "black"],
+        //        //rotate: 45
+        //    },
+        //    lineWidth: 1,
+        //    lineColor: "#fff"
+        //}));
+    </script>
+    <div id="output">
+    </div>
+    <div id="particles-js">
+    </div>
+    <script src="./modules/app.js"></script>
+    <script src="./modules/AI.js"></script>
+    <!--<script src="modules/AudioManager.js"></script>-->
+</body>
+
+</html>

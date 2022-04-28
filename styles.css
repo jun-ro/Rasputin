@@ -1,0 +1,74 @@
+body{
+    background-color: #000000;
+}
+
+
+#btn-start{
+    width:500px;
+    height:500px;
+    background-image: url(/design/image/tumblr_noenkbeTSw1qjmwryo1_500.gif);
+    border-style:none;
+}
+
+#btn-start:hover{
+    border-style: none;
+}
+
+#btn-start:active{
+    border-style: none;
+}
+
+.container{
+    position: absolute;
+    z-index: 2;
+    justify-content: center;
+    left: 25vw;
+    top: 3vw;
+    align-items: center;
+    background-color: transparent;
+
+}
+
+#voiceInput{
+    background-color:transparent;
+    color:white;
+    border-style: none;
+}
+
+
+button:active{
+    border-style: none;
+    outline: none;
+}
+
+.container2{
+    position: absolute;
+    z-index: 2;
+    justify-content: center;
+    left: 44.5vw;
+    top: 40vw;
+    align-items: center;
+    background-color: transparent;
+
+}
+
+#output{
+    z-index: 2;
+    position: fixed;
+    top: 15%;
+    left: 44.5%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+@media only screen and (min-width: 766px) and (max-width:766px) and (min-height: 1366px) and (max-height: 1366px) {
+    .container2{
+        position: absolute;
+        z-index: 2;
+        justify-content: center;
+        left: 54vw;
+        top: 37vw;
+        align-items: center;
+        background-color: transparent;
+    }
+}
